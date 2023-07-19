@@ -1,17 +1,17 @@
 <h1>New division</h1>
 
 <form action="/wizard_divide">
-  <label for="">
+  <label for="form_first_number">
     Divide this:
   </label>
-  <input id="" name="first_number" text="text">
+  <input id="form_first_number" name="first_num" type="text"> <!-- Corrected the input name and type -->
 
-  <label for="">
+  <label for="form_second_number"> <!-- Added an id for the second input -->
     by this:
   </label>
-  <input id="" name="second_num" text="text">
+  <input id="form_second_number" name="second_num" type="text"> <!-- Corrected the input name and type -->
 
-  <button>
+  <button type="submit"> <!-- Added type attribute for the button -->
     Divide!
   </button>
 </form>

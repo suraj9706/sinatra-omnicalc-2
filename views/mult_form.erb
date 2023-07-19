@@ -1,5 +1,17 @@
 <h1>New multiplication</h1>
 
-<form action="/">
+<form action="/wizard_multiply">
+  <label for="form_first_number">
+    Multiply this:
+  </label>
+  <input id="form_first_number" name="first_num" type="text"> <!-- Corrected the input name and type -->
 
+  <label for="form_second_number"> <!-- Added an id for the second input -->
+    by this:
+  </label>
+  <input id="form_second_number" name="second_num" type="text"> <!-- Corrected the input name and type -->
+
+  <button type="submit"> <!-- Added type attribute for the button -->
+    Multiply!
+  </button>
 </form>
