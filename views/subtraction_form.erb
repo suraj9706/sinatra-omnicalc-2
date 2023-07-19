@@ -1,17 +1,17 @@
 <h1>New subtraction</h1>
 
-<form action="/wizard_subtract">
+<form action="/wizard_subtract" method="post"> <!-- Corrected the action URL and added the method attribute -->
   <label for="form_first_number">
     Subtract this:
   </label>
-  <input id="form_first_number" name="first_num" type="text"> <!-- Corrected the input name and type -->
+  <input id="form_first_number" name="first_num" type="text">
 
-  <label for="form_second_number"> <!-- Added an id for the second input -->
+  <label for="form_second_number">
     from this:
   </label>
-  <input id="form_second_number" name="second_num" type="text"> <!-- Corrected the input name and type -->
+  <input id="form_second_number" name="second_num" type="text">
 
-  <button type="submit"> <!-- Added type attribute for the button -->
+  <button type="submit">
     Subtract!
   </button>
 </form>

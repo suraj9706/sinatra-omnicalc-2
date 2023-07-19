@@ -1,14 +1,12 @@
-# app.rb
-
 require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  redirect("/add") # Redirect to the add_form page
+  redirect("/add")
 end
 
 get("/add") do
-  erb(:add_form) # The form for addition
+  erb(:add_form)
 end
 
 post("/wizard_add") do
@@ -16,38 +14,42 @@ post("/wizard_add") do
   @second_num = params.fetch("second_num").to_f
 
   @result = @first_num + @second_num
-  erb(:add_result)
+  erb(:add_result) # Corrected the view name to erb(:add_result)
 end
 
+
 get("/subtract") do
-  erb(:sub_form) # The form for subtraction
+  erb(:subtraction_form)
 end
 
 post("/wizard_subtract") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
+  @result = @first_num - @second_num
   erb(:sub_result)
 end
 
 get("/multiply") do
-  erb(:multiplication_form) # The form for multiplication
+  erb(:mult_form)
 end
 
 post("/wizard_multiply") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
-  erb(:mult_result) # The multiplication result page
+  @result = @first_num * @second_num
+  erb(:mult_result)
 end
 
 get("/divide") do
-  erb(:div_form) # The form for division
+  erb(:div_form)
 end
 
 post("/wizard_divide") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
 
-  erb(:div_result) # The division result page
+  @result = @first_num / @second_num
+  erb(:div_result)
 end
